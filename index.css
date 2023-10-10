@@ -1,0 +1,78 @@
+@font-face {
+    font-family: calcFont;
+    src: url(digital-7.regular.ttf);
+}
+
+body {
+    margin: 0;
+}
+
+header {
+
+}
+
+h1 {
+   background-color: black;
+   margin: 0 20px;
+   padding: 45px;
+   font-size: 1.60rem; 
+   border-radius: 10px;
+   font-family: calcFont;
+   letter-spacing: .5px;
+}
+
+h2 {
+    margin: 0;
+    margin-top: 20px;
+    font-size: 1.15rem;
+}
+
+.pace-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+main {
+    width: 320px;
+    margin: auto;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 10px;
+    background-color: #4C1D95;
+    color: #F3F4F6;
+}
+
+
+.race-dist-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+input {
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 2px;
+    padding: 10px 2px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    background-color: #A78BFA;
+    color: white;
+}
+
+::placeholder {
+  color: white;
+  opacity:45%;
+}
+
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+

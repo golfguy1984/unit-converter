@@ -1,0 +1,45 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Race Calculator</h1>
+            </header>
+            
+            <section class="pace">
+                    <h2>🏃‍♂️ Pace 🏃‍♂️</h2>
+                <div class="pace-container">
+                    <label for="min-per-miles">Min/Miles
+                        <input id="min-per-miles" type="text" placeholder="hh:mm:ss"/>
+                    </label>
+                    <label for="min-per-km">Min/Km
+                        <input id="min-per-km" type="text" placeholder="hh:mm:ss"/>
+                    </label>
+                </div>
+                <!-- <button class="bg-black text-white p-2 rounded">Tailwind</button> -->
+            </section>
+            
+            <section class="race-distances">
+                    <h2>🏁 Race Distances 🏁</h2>
+                <div class="race-dist-container">
+                    <label for="fivek">5K
+                        <input id="fiveK" type="text" placeholder="hh:mm:ss"></input>
+                    </label>
+                    <label for="tenk">10K
+                        <input id="tenK" type="text" placeholder="hh:mm:ss"></input>
+                    </label>
+                    <label for="half">Half
+                        <input id="half" type="text" placeholder="hh:mm:ss"></input>
+                    </label>
+                    <label for="marathon">Marathon
+                        <input id="marathon" type="text" placeholder="hh:mm:ss"></input>
+                    </label>
+                </div>
+            </section>
+        </main>
+        <!-- <script src="https://unpkg.com/imask"></script> -->
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
