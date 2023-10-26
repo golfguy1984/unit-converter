@@ -21,6 +21,267 @@ const maskOptions = {
   mask: '00{:}00{:}00'
 };
 
+/** CALCULATIONS FROM 5K FIELD  */
+
+function mpmFrom5K(sec) {
+    let fiveKtoMin = sec / fiveKDist
+    let hours = (fiveKtoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+function kmFrom5K(sec) {
+    let fiveKtoMin = (sec / fiveKDist) / convNum
+    let hours = (fiveKtoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+function tenKFrom5K(sec) {
+    let fiveKtoMin = sec * 2
+    let hours = (fiveKtoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+
+
+function halfFrom5K(sec) {
+    let fiveKtoMin = sec * 4.22
+    let hours = (fiveKtoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+function fullFrom5K(sec) {
+    let fiveKtoMin = sec * 8.44
+    let hours = (fiveKtoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+
+/** CALCULATIONS FROM 10K FIELD */
+
+function mpmFrom10K(sec) {
+    let tenKtoMin = sec / tenKDist
+    let hours = (tenKtoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+function kmFrom10K(sec) {
+    let tenKtoMin = (sec / tenKDist) / convNum
+    let hours = (tenKtoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+function fiveKFrom10K(sec) {
+    let tenKtoMin = sec / 2
+    let hours = (tenKtoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+function halfFrom10K(sec) {
+    let halftoMin = sec * 2.11
+    let hours = (halftoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+function fullFrom10K(sec) {
+    let fulltoMin = sec * 4.22
+    let hours = (fulltoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+/** CALCULATION FROM HALF FIELD */
+
+function mpmFromHalf(sec) {
+    let halftoMin = sec / halfDist
+    let hours = (halftoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+function kmFromHalf(sec) {
+    let halftoMin = (sec / halfDist) / convNum
+    let hours = (halftoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+function fiveKFromHalf(sec) {
+    let halftoMin = sec / 4.22
+    let hours = (halftoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+function tenKFromHalf(sec) {
+    let HalftoMin = sec / 2.11
+    let hours = (HalftoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+function fullFromHalf(sec) {
+    let halftoMin = sec * 2
+    let hours = (halftoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+
+/** CALCULATION FROM FULL FIELD */
+
+function mpmFromFull(sec) {
+    let fulltoMin = sec / marathonDist
+    let hours = (fulltoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+function kmFromFull(sec) {
+    let fulltoMin = (sec / marathonDist) / convNum
+    let hours = (fulltoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+
+function fiveKFromFull(sec) {
+    let fulltoMin = sec / 8.44
+    let hours = (fulltoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+
+function tenKFromFull(sec) {
+    let fulltoMin = sec / 4.22
+    let hours = (fulltoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+function halfFromFull(sec) {
+    let fulltoMin = sec / 2
+    let hours = (fulltoMin / 3600)
+    let minutes = (hours - Math.floor(hours)) * 60
+    let seconds = (minutes - Math.floor(minutes)) * 60
+    let padHours = Math.floor(hours).toString().padStart(2, '0')
+    let padMin = Math.floor(minutes).toString().padStart(2, '0')
+    let padSec = Math.floor(seconds).toString().padStart(2, '0')
+    
+    return `${padHours}:${padMin}:${padSec}`
+}
+
+
+
+
+
+
+
+
 
 function mpmTime(sec) {
     let mpmConv = sec * convNum
@@ -33,6 +294,7 @@ function mpmTime(sec) {
     
     return `${padHours}:${padMin}:${padSec}`
 }
+
 
 function kmTime(sec) {
     let kmConv = sec / convNum
@@ -183,20 +445,20 @@ minPerKm.addEventListener('input', (e) => {
 })
 
 //5K field calculations
-
+/** change here */
 fiveK.addEventListener('input', (e) => {
     let fiveKValue = e.target.value
     let splitTime = fiveKValue.split(":")
     let sec = (splitTime[0] * 3600) + (splitTime[1] * 60) + (splitTime[2] * 1)
     const mask = IMask(fiveK, maskOptions);
-      
+    
     
     if (fiveKValue.length === 8) {
-        minPerMile.value =  mpmTime(sec)
-        minPerKm.value =  kmTime(sec)
-        tenK.value = tenKTime(sec)
-        half.value = halfTime(sec)
-        marathon.value = marathonTime(sec)
+        minPerMile.value =  mpmFrom5K(sec) // needs new math here
+        minPerKm.value =  kmFrom5K(sec)
+        tenK.value = tenKFrom5K(sec)
+        half.value = halfFrom5K(sec)
+        marathon.value = fullFrom5K(sec)
     } else {
         clearFields5K()
     }
@@ -211,11 +473,11 @@ tenK.addEventListener('input', (e) => {
       
     
     if (tenKValue.length === 8) {
-        minPerMile.value =  mpmTime(sec)
-        minPerKm.value =  kmTime(sec)
-        fiveK.value = fiveKTime(sec)
-        half.value = halfTime(sec)
-        marathon.value = marathonTime(sec)
+        minPerMile.value =  mpmFrom10K(sec)
+        minPerKm.value =  kmFrom10K(sec)
+        fiveK.value = fiveKFrom10K(sec)
+        half.value = halfFrom10K(sec)
+        marathon.value = fullFrom10K(sec)
     } else {
         clearFields10K()
     }
@@ -230,11 +492,11 @@ half.addEventListener('input', (e) => {
       
     
     if (halfValue.length === 8) {
-        minPerMile.value =  mpmTime(sec)
-        minPerKm.value =  kmTime(sec)
-        fiveK.value = fiveKTime(sec)
-        tenK.value = tenKTime(sec)
-        marathon.value = marathonTime(sec)
+        minPerMile.value =  mpmFromHalf(sec)
+        minPerKm.value =  kmFromHalf(sec)
+        fiveK.value = fiveKFromHalf(sec)
+        tenK.value = tenKFromHalf(sec)
+        marathon.value = fullFromHalf(sec)
     } else {
         clearFieldsHalf()
     }
@@ -249,11 +511,11 @@ marathon.addEventListener('input', (e) => {
       
     
     if (marathonValue.length === 8) {
-        minPerMile.value =  mpmTime(sec)
-        minPerKm.value =  kmTime(sec)
-        fiveK.value = fiveKTime(sec)
-        tenK.value = tenKTime(sec)
-        half.value = halfTime(sec)
+        minPerMile.value =  mpmFromFull(sec)
+        minPerKm.value =  kmFromFull(sec)
+        fiveK.value = fiveKFromFull(sec)
+        tenK.value = tenKFromFull(sec)
+        half.value = halfFromFull(sec)
     } else {
         clearFieldsMarathon()
     }
